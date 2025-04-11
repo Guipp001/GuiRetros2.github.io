@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gui Retros</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    header {
+      background: #f90202;
+      padding: 20px;
+      margin-bottom: 40px; /* <-- Aqui aumenta a distância entre o menu e o conteúdo */
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .whatsapp-btn {
+      background-color: #25D366;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.add('hidden'));
+      document.getElementById(sectionId).classList.remove('hidden');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><strong>Gui Retros o seu site de retros
+      </strong></div>
+      <div>
+        <a href="#" onclick="showSection('inicio')">Início</a>
+        <a href="#meus-trabalhos" onclick="showSection('inicio')">Meus Trabalhos</a>
+        <a href="#" onclick="showSection('como-funciona')">Como Funciona</a>
+        <a href="#" onclick="showSection('contato')">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="inicio" class="section">
+    <h1>Sobre A Loja!</h1>
+    <p>A Gui Retros é o primeiro site onde voce pode pedir sua retrospectiva e ser entregue em suas mãos sem voce precisar ter o trabalho de fazer,  Garantia de 100% na entrega de seu produto Ou seu dinheiro de volta!.</p>
+
+    <h2 id="meus-trabalhos" style="margin-top: 300px;">Meus Trabalhos</h2>
+    <div class="videos">
+      <video controls>
+        <source src="videos/0221.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+      <video controls>
+        <source src="videos/1227.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+    </div>
+  </div>
+
+  <div id="como-funciona" class="section hidden">
+    <h2>Como Funciona</h2>
+    <p>Você escolhe as fotos, vídeos e músicas. Nós criamos tudo com carinho e qualidade. Você aprova e recebe por link ou pendrive (opcional).</p>
+  </div>
+
+  <div id="contato" class="section hidden">
+    <h2>Entre em Contato</h2>
+    <p>Fale comigo direto no WhatsApp E tire suas duvidas sobre os preços!</p>
+    <a class="whatsapp-btn" href="https://wa.me/5511954762944" target="_blank">Falar no WhatsApp</a>
+  </div>
+</body>
+</html>
+
